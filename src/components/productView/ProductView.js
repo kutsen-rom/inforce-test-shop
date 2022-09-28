@@ -12,7 +12,7 @@ export const ProductView = ({ setModal, modal }) => {
     return (
         <div className='product-view'>
             <div className='product-view-container'>
-                <img height='500px' src={product[0].imageUrl} />
+                <img alt={product[0].name} height='500px' src={product[0].imageUrl} />
                 <div className='product-details'>
                     <h2>{product[0].name}</h2>
                     <h3>Count: {product[0].count}</h3>

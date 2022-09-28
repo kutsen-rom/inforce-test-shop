@@ -10,10 +10,9 @@ export const NavBar = () => {
 
     return (
     <>
-    {console.log(isLoading)}
             <header>
                 <Link to='/'> 
-                    <img src='/images/logo.svg' className='logo' />
+                    <img alt='Inforce logo' src='/images/logo.svg' className='logo' />
                 </Link>
             </header>
         {isLoading ? <Loading /> : <Outlet />}

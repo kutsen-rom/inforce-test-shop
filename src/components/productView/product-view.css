@@ -25,9 +25,18 @@
     font-weight: bold;
     color: white;
     border-radius: 5px;
+    padding: 5px 0;
 }
 
 .product-view-edit-button:hover {
     background-color: rgb(3, 147, 72);
     cursor: pointer;
+}
+
+.product-details {
+    width: 17.5%;
+    height: 80%;
+    border-radius: 5px;
+    padding: 0 5rem;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
 }

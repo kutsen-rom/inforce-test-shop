@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './modal.css'
-import { editProducts, selectProducts, setProducts } from '../../features/products/productsSlice';
+import { selectProducts, setProducts } from '../../features/products/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProduct, deleteProduct, setIsLoading } from '../../features/products/productsSlice';
 
@@ -34,38 +34,6 @@ export const Modal = ({ setModal, modal, id }) => {
             dispatch(deleteProduct({deleteOptions, id}));
             dispatch(setProducts(newProducts));
         }, 2000)
-    }
-
-    const handleEdit = () => {
-        // const editedProducts = products.map(product => product.id === id ? {...product,})
-        const prod = products.filter(product => product.id === id);
-        let produ = {};
-        for (let key in prod[0]) {
-            produ = {...prod[0], name: 'ddd'}
-        console.log(produ[key])
-        console.log(produ)
-        }
-        
-        // const editOptions = {
-        //     method: 'PATCH',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(edited)
-        // }
-
-        // dispatch(editProducts({editOptions, id}))
-        setNewProduct({
-            name: '',
-            imageUrl: '',
-            count: '',
-            weight: '',
-            height: '',
-            width: ''
-        });
-        setTimeout(() => {
-            setModal('modal-hide')
-        }, 1000)
     }
 
     const handleAdd = () => {
@@ -171,7 +139,7 @@ export const Modal = ({ setModal, modal, id }) => {
                         {modal === 'modal-add-product'
                             ?   <div onClick={handleAdd} className='modal-button modal-add-button'>Add</div>
                             :  modal === 'modal-edit-product'
-                            ?  <div onClick={handleEdit} className='modal-button modal-edit-button'>Edit</div>
+                            ?  <div className='modal-button modal-edit-button'>Edit</div>
                             : <div onClick={handleDelete}  className='modal-button modal-delete-button'>Confirm</div>
                             }
                         

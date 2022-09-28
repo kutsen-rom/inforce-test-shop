@@ -60,6 +60,8 @@ a .link:hover {
 
 .delete-button {
     background-color: rgb(252, 71, 46);
+    position: relative;
+    bottom: 0px;
 }
 
 .delete-button:hover {

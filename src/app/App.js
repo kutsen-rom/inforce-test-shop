@@ -15,6 +15,7 @@ function App() {
     setTimeout(() => {
     dispatch(loadProducts())
     }, 2000)
+    // eslint-disable-next-line
 }, [])
 
   return (

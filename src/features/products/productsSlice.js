@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { json } from "react-router-dom";
 import apiRequest from "../../apiRequest";
 
 const API_URL = 'http://localhost:3500/products';
@@ -48,7 +47,6 @@ export const deleteProduct = createAsyncThunk(
     async ({deleteOptions, id}) => {
         try {
             const response = await apiRequest(`${API_URL}/${id}`, deleteOptions);
-            console.log(response);
             const products = response.json();
             return products
         } catch (err) {

@@ -3,7 +3,7 @@ import './footer.css'
 export const Footer = () => {
     return (
         <footer>
-            <p>made in Lviv</p>
+            <p>MADE IN LVIV 2022</p>
         </footer>
     )
 }
