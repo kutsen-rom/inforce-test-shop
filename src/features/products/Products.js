@@ -7,7 +7,6 @@ import { selectProducts } from './productsSlice'
 
 export const Products = ({ setModal, modal }) => {
     const products = useSelector(selectProducts);
-    console.log(products)
     return (
         <div className='products'>
             <div className='products-container'>
@@ -16,7 +15,8 @@ export const Products = ({ setModal, modal }) => {
                 <p className='button-text'>Add product</p> 
             </div>
                 {products.map(product => {
-                    return <Product product={product} key={product.id} />
+                    console.log(products)
+                    return <Product setModal={setModal} product={product} key={product.id} />
                 })}
             </div>
             <Modal setModal={setModal} modal={modal} />

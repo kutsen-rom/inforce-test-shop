@@ -2,7 +2,7 @@
     display: none;
 }
 
-.modal-add-product {
+.modal-add-product, .modal-edit-product {
     position: fixed;
     top: 0;
     z-index: 10;
@@ -71,12 +71,12 @@
     border-radius: 5px;
 }
 
-.modal-add-button {
+.modal-add-button, .modal-edit-button {
     background-color: rgb(0, 207, 99);
     
 }
 
-.modal-add-button:hover {
+.modal-add-button:hover, .modal-edit-button:hover {
     background-color: rgb(3, 147, 72);
     cursor: pointer;
 }

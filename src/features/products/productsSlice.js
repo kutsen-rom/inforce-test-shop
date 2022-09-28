@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { buildQueries } from "@testing-library/react";
+import { json } from "react-router-dom";
+import apiRequest from "../../apiRequest";
 
 const API_URL = 'http://localhost:3500/products';
 
@@ -16,11 +17,25 @@ export const loadProducts = createAsyncThunk(
     }
 )
 
+export const addProduct = createAsyncThunk(
+    'products/addProduct',
+    async (postOptions) => {
+        try {
+            const response = await fetch(API_URL, postOptions);
+            const product = response.json();
+            return product;
+        } catch (err) {
+            console.log(err.stack)
+        }   
+    }
+)
+
 export const productsSlice = createSlice({
     name: 'products',
     initialState: {
         products: [],
         isLoading: false,
+        isAdding: false,
         loadingError: false
     },
     reducers: {},
@@ -37,6 +52,20 @@ export const productsSlice = createSlice({
             .addCase(loadProducts.rejected, (state) => {
                 state.loadingError = true;
                 state.isLoading = false;
+            })
+            .addCase(addProduct.pending, (state) => {
+                state.isAdding = true;
+                state.loadingError = false;
+            })
+            .addCase(addProduct.fulfilled, (state, action) => {
+                state.isAdding = false;
+                state.loadingError = false;
+                state.products.push(action.payload);
+                console.log(action.payload)
+            })
+            .addCase(addProduct.rejected, (state) => {
+                state.isAdding = false;
+                state.loadingError = true;
             })
     }
 })

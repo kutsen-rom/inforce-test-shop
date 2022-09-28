@@ -1,108 +1,297 @@
-{   
-    "products": [
-        {
-            "id": 1,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4820/67_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Samsung Galaxy A02 (A022/32)",
-            "count": 4,
-            "size": {
-                "width": 75.9,
-                "height": 164
-            },
-            "weight": "206g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-
-        {
-            "id": 2,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/5236/72_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Apple iPhone 14 256GB",
-            "count": 2,
-            "size": {
-                "width": 71.5,
-                "height": 146.7
-            },
-            "weight": "172g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-
-        {
-            "id": 3,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4873/80_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Samsung Galaxy A52 4/128Gb",
-            "count": 3,
-            "size": {
-                "width": 75.1,
-                "height": 159.9
-            },
-            "weight": "189g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-
-        {
-            "id": 4,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4911/25_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Apple iPhone 13 Pro Max 512GB",
-            "count": 3,
-            "size": {
-                "width": 78.1,
-                "height": 160.8
-            },
-            "weight": "238g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-        
-        {
-            "id": 5,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/5143/37_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Samsung Galaxy A23 4/64Gb LTE (A235/64)",
-            "count": 7,
-            "size": {
-                "width": 76.9,
-                "height": 165.4
-            },
-            "weight": "195g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-
-        {
-            "id": 6,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4526/73_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Apple iPhone 11 64GB",
-            "count": 1,
-            "size": {
-                "width": 75.7,
-                "height": 150.9
-            },
-            "weight": "189g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-
-        {
-            "id": 7,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4643/40_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Apple iPhone SE 2020 64GB",
-            "count": 0,
-            "size": {
-                "width": 67.3,
-                "height": 138.4
-            },
-            "weight": "148g",
-            "comments": ["CommentModel", "CommentModel"]
-        },
-
-        {
-            "id": 8,
-            "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4873/78_4000.jpg/w_600,h_600,r_inside,imdt",
-            "name": "Samsung Galaxy A32 4/128Gb",
-            "count": 5,
-            "size": {
-                "width": 73.6,
-                "height": 158.9
-            },
-            "weight": "184g",
-            "comments": ["CommentModel", "CommentModel"]
-        }
-]
-  
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4820/67_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Samsung Galaxy A02 (A022/32)",
+      "count": 4,
+      "size": {
+        "width": 75.9,
+        "height": 164
+      },
+      "weight": "206g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/5236/72_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Apple iPhone 14 256GB",
+      "count": 2,
+      "size": {
+        "width": 71.5,
+        "height": 146.7
+      },
+      "weight": "172g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4873/80_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Samsung Galaxy A52 4/128Gb",
+      "count": 3,
+      "size": {
+        "width": 75.1,
+        "height": 159.9
+      },
+      "weight": "189g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4911/25_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Apple iPhone 13 Pro Max 512GB",
+      "count": 3,
+      "size": {
+        "width": 78.1,
+        "height": 160.8
+      },
+      "weight": "238g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/5143/37_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Samsung Galaxy A23 4/64Gb LTE (A235/64)",
+      "count": 7,
+      "size": {
+        "width": 76.9,
+        "height": 165.4
+      },
+      "weight": "195g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4526/73_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Apple iPhone 11 64GB",
+      "count": 1,
+      "size": {
+        "width": 75.7,
+        "height": 150.9
+      },
+      "weight": "189g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4643/40_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Apple iPhone SE 2020 64GB",
+      "count": 0,
+      "size": {
+        "width": 67.3,
+        "height": 138.4
+      },
+      "weight": "148g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4873/78_4000.jpg/w_600,h_600,r_inside,imdt",
+      "name": "Samsung Galaxy A32 4/128Gb",
+      "count": 5,
+      "size": {
+        "width": 73.6,
+        "height": 158.9
+      },
+      "weight": "184g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awd",
+      "count": "awd",
+      "width": "daw",
+      "height": "ad",
+      "weight": "daw",
+      "id": 9
+    },
+    {
+      "name": "daw",
+      "imageUrl": "adw",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 10
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awda",
+      "count": "adwd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 11
+    },
+    {
+      "name": "dasd",
+      "imageUrl": "asdas",
+      "count": "dasd",
+      "width": "asd",
+      "height": "asd",
+      "weight": "asd",
+      "id": 12
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awd",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 13
+    },
+    {
+      "name": "dasd",
+      "imageUrl": "asd",
+      "count": "asd",
+      "width": "asd",
+      "height": "asd",
+      "weight": "asd",
+      "id": 14
+    },
+    {
+      "name": "new",
+      "imageUrl": "new",
+      "count": "new",
+      "width": "ewnwea",
+      "height": "we",
+      "weight": "we",
+      "id": 15
+    },
+    {
+      "name": "daw",
+      "imageUrl": "adw",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 16
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awd",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "ffggf",
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "name": "neeeew",
+      "imageUrl": "dawd",
+      "count": "dawd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 19
+    },
+    {
+      "name": "daw",
+      "imageUrl": "awd",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 20
+    },
+    {
+      "name": "daw",
+      "imageUrl": "daw",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 21
+    },
+    {
+      "imageUrl": "awd",
+      "name": "dawd",
+      "count": "dawd",
+      "width": "awfh",
+      "height": "fth",
+      "weight": "fh",
+      "id": 22
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awda",
+      "count": "dawd",
+      "width": "awda",
+      "height": "wdawd",
+      "weight": "awd",
+      "id": 23
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awda",
+      "count": "dawd",
+      "width": "awd",
+      "height": "awdaw",
+      "weight": "awdaw",
+      "id": 24
+    },
+    {
+      "name": "dawd",
+      "imageUrl": "awda",
+      "count": "dawd",
+      "width": "awd",
+      "height": "awdaw",
+      "weight": "awdaw",
+      "id": 25
+    },
+    {
+      "name": "dawdsds",
+      "id": 26
+    },
+    {
+      "name": "",
+      "id": 27
+    },
+    {
+      "name": "",
+      "imageUrl": "",
+      "count": "",
+      "weight": "",
+      "height": "",
+      "width": "",
+      "id": 28
+    },
+    {
+      "name": "awd",
+      "imageUrl": "",
+      "count": "awd",
+      "width": "awd",
+      "height": "awd",
+      "weight": "awd",
+      "id": 29
     }
+  ]
+}
