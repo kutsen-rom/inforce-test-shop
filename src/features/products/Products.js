@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Modal } from '../../components/modal/Modal'
 import { Product } from '../../components/product/Product'
@@ -7,6 +7,8 @@ import { selectProducts } from './productsSlice'
 
 export const Products = ({ setModal, modal }) => {
     const products = useSelector(selectProducts);
+    
+    const [id, setId] = useState(0);
     return (
         <div className='products'>
             <div className='products-container'>
@@ -15,11 +17,10 @@ export const Products = ({ setModal, modal }) => {
                 <p className='button-text'>Add product</p> 
             </div>
                 {products.map(product => {
-                    console.log(products)
-                    return <Product setModal={setModal} product={product} key={product.id} />
+                    return <Product setId={setId} setModal={setModal} product={product} key={product.id} />
                 })}
             </div>
-            <Modal setModal={setModal} modal={modal} />
+            <Modal id={id} setModal={setModal} modal={modal} />
         </div>
     )
 }

@@ -30,15 +30,49 @@ export const addProduct = createAsyncThunk(
     }
 )
 
+export const editProducts = createAsyncThunk(
+    'products/editProducts',
+    async ({editOptions, id}) => {
+        try {
+            const response = await fetch(`${API_URL}/${id}`, editOptions);
+            const products = response.json();
+            return products;
+        } catch (err) {
+            console.log(err.stack)
+        }
+    }
+)
+
+export const deleteProduct = createAsyncThunk(
+    'products/deleteProduct',
+    async ({deleteOptions, id}) => {
+        try {
+            const response = await apiRequest(`${API_URL}/${id}`, deleteOptions);
+            console.log(response);
+            const products = response.json();
+            return products
+        } catch (err) {
+            console.log(err.stack)
+        }
+    }
+)
+
 export const productsSlice = createSlice({
     name: 'products',
     initialState: {
         products: [],
-        isLoading: false,
+        isLoading: true,
         isAdding: false,
         loadingError: false
     },
-    reducers: {},
+    reducers: {
+        setProducts: (state, action) => {
+            state.products = action.payload;
+        },
+        setIsLoading: (state, action) => {
+            state.isLoading = true;
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(loadProducts.pending, (state) => {
@@ -61,7 +95,6 @@ export const productsSlice = createSlice({
                 state.isAdding = false;
                 state.loadingError = false;
                 state.products.push(action.payload);
-                console.log(action.payload)
             })
             .addCase(addProduct.rejected, (state) => {
                 state.isAdding = false;
@@ -71,5 +104,8 @@ export const productsSlice = createSlice({
 })
 
 export const selectProducts = state => state.products.products;
+export const selectIsLoading = state => state.products.isLoading;
 
-export default productsSlice.reducer
+export const { setProducts, setIsLoading } = productsSlice.actions;
+
+export default productsSlice.reducer;

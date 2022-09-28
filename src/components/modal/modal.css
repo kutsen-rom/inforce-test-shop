@@ -2,7 +2,7 @@
     display: none;
 }
 
-.modal-add-product, .modal-edit-product {
+.modal-add-product, .modal-edit-product, .modal-delete-product {
     position: fixed;
     top: 0;
     z-index: 10;
@@ -12,13 +12,26 @@
     overflow: hidden;
 }
 
-.modal {
+.modal-delete {
+    position: relative;
+    width: 50%;
+    height: 25%;
+    background-color: white;
+    transform: translate(50%, 120%);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.modal- {
     position: relative;
     width: 50%;
     height: 90%;
     background-color: white;
     transform: translate(50%, 5%);
     border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .modal h2 {
@@ -69,14 +82,15 @@
 .modal-button {
     padding: 10px 20px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-.modal-add-button, .modal-edit-button {
+.modal-add-button, .modal-edit-button, .modal-delete-button {
     background-color: rgb(0, 207, 99);
     
 }
 
-.modal-add-button:hover, .modal-edit-button:hover {
+.modal-add-button:hover, .modal-edit-button:hover, .modal-delete-button:hover {
     background-color: rgb(3, 147, 72);
     cursor: pointer;
 }
