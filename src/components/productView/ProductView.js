@@ -15,10 +15,10 @@ export const ProductView = ({ setModal, modal }) => {
                 <img alt={product[0].name} height='500px' src={product[0].imageUrl} />
                 <div className='product-details'>
                     <h2>{product[0].name}</h2>
-                    <h3>Count: {product[0].count}</h3>
-                    <h3>Height: {product[0].size.height}mm</h3>
-                    <h3>Width: {product[0].size.width}mm</h3>
-                    <h3>Weight: {product[0].weight}</h3>
+                    <p>Count: {product[0].count}</p>
+                    <p>Height: {product[0].size.height}mm</p>
+                    <p>Width: {product[0].size.width}mm</p>
+                    <p>Weight: {product[0].weight}</p>
                     <div onClick={() => setModal('modal-edit-product')} className='product-view-edit-button'>Edit</div>
                 </div>
             </div>

@@ -1,7 +1,5 @@
 {
   "products": [
-    
-    
     {
       "id": 1,
       "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/5236/72_4000.jpg/w_600,h_600,r_inside,imdt",
@@ -77,7 +75,6 @@
         "CommentModel"
       ]
     },
-    
     {
       "id": 6,
       "imageUrl": "https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/4873/78_4000.jpg/w_600,h_600,r_inside,imdt",
