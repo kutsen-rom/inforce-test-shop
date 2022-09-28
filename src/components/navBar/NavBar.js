@@ -16,7 +16,7 @@ export const NavBar = () => {
                     <img src='/images/logo.svg' className='logo' />
                 </Link>
             </header>
-        {false ? <Loading /> : <Outlet />}
+        {isLoading ? <Loading /> : <Outlet />}
         <Footer />
     </>
     )

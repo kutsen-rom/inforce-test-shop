@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './modal.css'
 import { editProducts, selectProducts, setProducts } from '../../features/products/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { addProduct, deleteProduct } from '../../features/products/productsSlice';
+import { addProduct, deleteProduct, setIsLoading } from '../../features/products/productsSlice';
 
 export const Modal = ({ setModal, modal, id }) => {
     const dispatch = useDispatch();
@@ -26,14 +26,14 @@ export const Modal = ({ setModal, modal, id }) => {
     }
 
     const handleDelete = () => {
+        setModal('modal-hide')
+        dispatch(setIsLoading());
         const newProducts = products.filter(product => product.id !== id);
         const deleteOptions = { method: 'DELETE' };
-
-        dispatch(deleteProduct({deleteOptions, id}));
-        dispatch(setProducts(newProducts));
         setTimeout(() => {
-            setModal('modal-hide')
-        }, 1000)
+            dispatch(deleteProduct({deleteOptions, id}));
+            dispatch(setProducts(newProducts));
+        }, 2000)
     }
 
     const handleEdit = () => {
@@ -72,6 +72,8 @@ export const Modal = ({ setModal, modal, id }) => {
         if (!newProduct.name || !newProduct.count) {
             return
         }
+        setModal('modal-hide')
+        dispatch(setIsLoading());
         let productId = products.length + 1;
         if (products.filter(product => product.id === productId)) {
             productId++;
@@ -88,7 +90,9 @@ export const Modal = ({ setModal, modal, id }) => {
             },
             body: JSON.stringify(newProduct)
         }
-        dispatch(addProduct(postOptions))
+        setTimeout(() => {
+            dispatch(addProduct(postOptions))
+        }, 2000)
         setNewProduct({
             name: '',
             imageUrl: '',
@@ -97,9 +101,6 @@ export const Modal = ({ setModal, modal, id }) => {
             height: '',
             width: ''
         });
-        setTimeout(() => {
-            setModal('modal-hide')
-        }, 1000)
     }
 
     return (
@@ -130,15 +131,16 @@ export const Modal = ({ setModal, modal, id }) => {
                         required
                         placeholder='https://i.moyo.ua/55aec978-af5b-4da3-9655-8ddd8460efaf/https://img.moyo.ua/img/products/5236/72_4000.jpg/w_600,h_600,r_inside,imdt'>
                     </input>
-                    <p>count</p>
+                    <p>Count:</p>
                     <input 
                         name='count'
+                        type='number'
                         value={newProduct.count}
                         onChange={handleChange}
                         required
                         placeholder='2'>
                     </input>
-                    <p>width</p>
+                    <p>Width:</p>
                     <input 
                         name='width'
                         value={newProduct.width}
@@ -146,7 +148,7 @@ export const Modal = ({ setModal, modal, id }) => {
                         required
                         placeholder='71.5'>
                     </input>
-                    <p>height</p>
+                    <p>Height:</p>
                     <input 
                         name='height'
                         value={newProduct.height}
@@ -154,7 +156,7 @@ export const Modal = ({ setModal, modal, id }) => {
                         required
                         placeholder='146.7'>
                     </input>
-                    <p>weight</p>
+                    <p>Weight:</p>
                     <input 
                         name='weight'
                         value={newProduct.weight}

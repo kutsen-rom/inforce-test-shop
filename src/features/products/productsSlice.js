@@ -62,14 +62,13 @@ export const productsSlice = createSlice({
     initialState: {
         products: [],
         isLoading: true,
-        isAdding: false,
         loadingError: false
     },
     reducers: {
         setProducts: (state, action) => {
             state.products = action.payload;
         },
-        setIsLoading: (state, action) => {
+        setIsLoading: (state) => {
             state.isLoading = true;
         }
     },
@@ -92,13 +91,16 @@ export const productsSlice = createSlice({
                 state.loadingError = false;
             })
             .addCase(addProduct.fulfilled, (state, action) => {
-                state.isAdding = false;
+                state.isLoading = false;
                 state.loadingError = false;
                 state.products.push(action.payload);
             })
             .addCase(addProduct.rejected, (state) => {
                 state.isAdding = false;
                 state.loadingError = true;
+            })
+            .addCase(deleteProduct.fulfilled, (state) => {
+                state.isLoading = false;
             })
     }
 })

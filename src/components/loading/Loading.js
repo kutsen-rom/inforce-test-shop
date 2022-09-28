@@ -4,44 +4,45 @@ export const Loading = () => {
     return (
         <div className='loading'>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
+                
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
             <div className='box'>
-                <div className='img-placeholder'></div>
-                <div className='name-placeholder'></div>
-                <div className='row-placeholder'></div>
+                <div className='img-placeholder slider'></div>
+                <div className='name-placeholder slider'></div>
+                <div className='button-placeholder slider'></div>
             </div>
         </div>
     )

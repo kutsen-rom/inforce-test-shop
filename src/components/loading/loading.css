@@ -1,22 +1,69 @@
 .loading {
     margin: 0;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     z-index: 500;
     background-color: rgb(247, 248, 249);
-    padding-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
 }
 
 .box {
-    height: 110%;
+    margin-top: 10px;
+    height: 96%;
     width: 90%;
     text-decoration: none;
     color: black;
     border: 1px solid rgb(214, 214, 214);
     background-color: white;
     margin-left: 3%;
-    margin-bottom: 50px;
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(0.75turn, rgb(172, 172, 172) , rgb(220, 220, 220) , rgb(190, 190, 190));
+}
+
+.name-placeholder {
+    margin-top: 10px;
+    width: 90%;
+    height: 4rem;
+    background-color: red;
+}
+
+.button-placeholder {
+    width: 45%;
+    margin-top: 15px;
+    height: 3rem;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.slider {
+    width: 200%;
+    left: -150%;
+    background: linear-gradient(0.75turn, rgb(255, 255, 255) , rgb(220, 220, 220) , rgb(255, 255, 255));
+    position: relative;
+    animation: 1.5s linear infinite forwards sliding;
+}
+
+@keyframes sliding {
+    0% {
+         left: -150%;
+    }
+
+    80% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
 }
