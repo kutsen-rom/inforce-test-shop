@@ -1,0 +1,91 @@
+.modal-hide {
+    display: none;
+}
+
+.modal-add-product {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal {
+    position: relative;
+    width: 50%;
+    height: 90%;
+    background-color: white;
+    transform: translate(50%, 5%);
+    border-radius: 10px;
+}
+
+.modal h2 {
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 10px;
+   margin: 0;
+}
+
+.modal-add-product-form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-add-product-form p {
+    text-align: left;
+    width: 51%;
+    margin: 10px 0 5px 0;
+}
+
+.modal-add-product-form input {
+    width: 50%;
+    border: 1px solid rgb(150, 150, 150);
+    padding: 7px;
+    border-radius: 5px;
+    margin: 0;
+}
+.modal-add-product-form input:hover {
+    border: 1px solid rgb(86, 86, 86);
+    background-color: rgb(250, 250, 250);
+}
+
+.modal-add-product-form input:focus {
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+}
+
+.modal-buttons {
+    width: 50%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.modal-add-button {
+    background-color: rgb(0, 207, 99);
+    
+}
+
+.modal-add-button:hover {
+    background-color: rgb(3, 147, 72);
+    cursor: pointer;
+}
+
+.modal-cancel-button {
+    background-color: rgb(252, 71, 46);
+}
+
+.modal-cancel-button:hover {
+    background-color: rgb(201, 56, 36);
+    cursor: pointer;
+}
