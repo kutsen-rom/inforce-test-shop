@@ -9,10 +9,15 @@ export const Products = () => {
     console.log(products)
     return (
         <div className='products'>
-            <h1>PRODUCTS</h1>
+        <div className='products-container'>
+        <div className='add-product'>
+            <p className='plus'>+</p>
+            <p className='button-text'>Add product</p> 
+        </div>
             {products.map(product => {
                 return <Product product={product} key={product.id} />
             })}
+        </div>
         </div>
     )
 }
